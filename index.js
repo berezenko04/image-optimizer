@@ -12,6 +12,10 @@ if (!fs.existsSync(outputFolderPath)) {
   fs.mkdirSync(outputFolderPath);
 }
 
+if (!fs.existsSync(inputFolderPath)) {
+  fs.mkdirSync(inputFolderPath);
+}
+
 async function optimizeImages() {
   try {
     const files = fs.readdirSync(inputFolderPath);
